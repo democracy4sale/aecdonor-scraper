@@ -115,7 +115,7 @@ for x in xrange(upto, len(periods)):
     response = br.submit("ctl00$ContentPlaceHolderBody$analysisControl$buttonAnalyse")
 
 
-    br.select_form(nr=0)
+    br.select_form(nr=2)
     br['ctl00$ContentPlaceHolderBody$pagingControl$cboPageSize']=["999999"]
     response = br.submit("ctl00$ContentPlaceHolderBody$pagingControl$buttonGo")
 
