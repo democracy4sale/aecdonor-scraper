@@ -105,9 +105,14 @@ for x in xrange(upto, len(periods)):
     #print br.form
     print periods[x]['id']
 
-    br['ctl00$dropDownListPeriod']=[periods[x]['id']]
-    response = br.submit("ctl00$buttonGo")
+    # The syntax on this next bit seems to be failing, could be a change on the AEC's end
+    #br['ctl00$dropDownListPeriod']=[periods[x]['id']]
+    #response = br.submit("ctl00$buttonGo")
 
+    # Ryan's attempted fix
+    br.form.find_control(id = [periods[x]['id']])
+    response = br.submit("ctl00$buttonGo")
+    
     response = br.open(annDonorsurl)
     br.select_form(nr=0)
     response = br.submit("ctl00$ContentPlaceHolderBody$analysisControl$buttonAnalyse")
