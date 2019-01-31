@@ -101,7 +101,7 @@ for x in xrange(upto, len(periods)):
 
     print "All forms:", [ form.name  for form in br.forms() ]
  
-    br.select_form(nr=1)
+    br.select_form(nr=2)
     #print br.form
     print periods[x]['id']
 
