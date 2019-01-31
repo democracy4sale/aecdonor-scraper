@@ -110,7 +110,8 @@ for x in xrange(upto, len(periods)):
     #response = br.submit("ctl00$buttonGo")
 
     # Ryan's attempted fix
-    br.form.find_control(id = periods[x]['id'])
+    dropD = br.form.find_control(id = 'ctl00$dropDownListPeriod')
+    dropD.value = periods[x]['id']
     response = br.submit("ctl00$buttonGo")
     
     response = br.open(annDonorsurl)
