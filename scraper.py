@@ -1,4 +1,4 @@
-#Prep for Feb 1 2018 ???
+#Prep for Feb 1 2019
 
 import csv
 import mechanize 
@@ -27,7 +27,8 @@ periods = [
 #{"year":"2013-2014","id":"55"},
 #{"year":"2014-2015","id":"56"},
 #{"year":"2015-2016","id":"60"},
-{"year":"2016-2017","id":"64"}
+#{"year":"2016-2017","id":"64"},
+{"year":"2017-2018","id":"68"},
 ]
 
 partyGroups = [{"entityID":4,"group":"alp"},
