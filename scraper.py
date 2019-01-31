@@ -99,19 +99,18 @@ for x in xrange(upto, len(periods)):
     #    print form
 
 
-    print "All forms:", [ form.name  for form in br.forms() ]
- 
+    print "All forms:", [ form.name  for form in br.forms()]
+    # This was set at 0, but I think the forms were rearranged
     br.select_form(nr=2)
     #print br.form
     print periods[x]['id']
-
-    # The syntax on this next bit seems to be failing, could be a change on the AEC's end
+    
     br['ctl00$dropDownListPeriod']=[periods[x]['id']]
     response = br.submit("ctl00$buttonGo")
 
-
-    
     response = br.open(annDonorsurl)
+    
+    print "All forms:", [ form.name  for form in br.forms()]   
     br.select_form(nr=0)
     response = br.submit("ctl00$ContentPlaceHolderBody$analysisControl$buttonAnalyse")
 
