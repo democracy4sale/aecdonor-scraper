@@ -110,8 +110,8 @@ for x in xrange(upto, len(periods)):
 
     response = br.open(annDonorsurl)
     
-    print "All forms:", [ form.name  for form in br.forms()]   
-    br.select_form(nr=0)
+    #print "All forms:", [ form.name  for form in br.forms()]   
+    br.select_form(nr=2)
     response = br.submit("ctl00$ContentPlaceHolderBody$analysisControl$buttonAnalyse")
 
 
