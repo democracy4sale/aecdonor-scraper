@@ -99,7 +99,7 @@ for x in xrange(upto, len(periods)):
     #    print form
 
 
-    #print "All forms:", [ form.name  for form in br.forms() ]
+    print "All forms:", [ form.name  for form in br.forms() ]
  
     br.select_form(nr=0)
     #print br.form
